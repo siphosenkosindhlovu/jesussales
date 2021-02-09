@@ -1,0 +1,46 @@
+<%- include('./includes/header.ejs') %>
+
+<section class="container-md py-5">
+  <picture>
+    <source srcset="../images/myca-mov-1500x230-1_1.png" media="(min-width: 768px)">
+    <img src="images/contact-movie-mobile.png" class="img-fluid" width="100%">
+  </picture>
+</section>
+<section class="container mb-5 mb-lg-8xl">
+  <div class="row">
+    <div class="col-md-4 text-center text-md-left">
+      <h2 class="h3">
+        Ubicación
+      </h2>
+      <p class="h4 font-weight-normal">
+        Calle Plaza de Toros Vieja, 9-11.<br />
+        29002 Málaga.
+      </p>
+    </div>
+    <div class="col-md-4 text-center text-md-left">
+      <h2 class="h3">
+        Contacto
+      </h2>
+      <p class="h4 font-weight-normal">
+        Teléfono:+34 672 24 10 06 <br>
+        Email: info@mycamelleva.com.
+      </p>
+    </div>
+    <div class="col-md-4 text-center text-md-left">
+      <h2 class="h3">
+        Horario
+      </h2>
+      <p class="h4 font-weight-normal">
+        L - V: 9:00-18:00 <br>
+        Sábado Cerrado.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="container-fluid px-lg-6 pb-5 pb-lg-9">
+  <%- include('./includes/contact-form.ejs') %>
+  <div class="text-center">
+    <button type="button" class="btn btn-turqoise">Te llamamos</button>
+  </div>
+</section>
+<%- include('./includes/footer.ejs') %>

@@ -26,7 +26,7 @@ var paths = {
     output: 'dist/js/',
   },
   styles: {
-    input: 'src/styles/**/*.css',
+    input: 'src/styles/**/*.scss',
     output: 'dist/css/',
   },
   images: {
@@ -203,17 +203,18 @@ var buildStyles = function (done) {
 			gulpIf(PRODUCTION,
 				envs
 			)
-		)
+    )
+    .pipe(sass())
     .pipe(
       postcss([
-        require('precss'),
-        require('tailwindcss'),
-        require('postcss-font-magician')({
-          hosted: ['./src/copy/fonts', '/fonts'],
-        }),
-        require('rfs')({
-          breakpoint: 1640,
-        }),
+        // require('precss'),
+        // require('tailwindcss'),
+        // require('postcss-font-magician')({
+        //   hosted: ['./src/copy/fonts', '/fonts'],
+        // }),
+        // require('rfs')({
+        //   breakpoint: 1640,
+        // }),
         prefix({
           cascade: true,
           remove: true,

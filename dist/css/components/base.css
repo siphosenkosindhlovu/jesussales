@@ -1,18 +1,1 @@
-/*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
-/**
- * @section Base Styles
- */
-
-body {
-  font-size: 125%;
-  margin: 0 auto;
-  max-width: 42em;
-  width: 88%;
-}
-
-input,
-textarea,
-select,
-button {
-  font: inherit;
-}
+/*! project-name v0.0.1 | (c) 2021 Siphosenkosi Ndhlovu | MIT License | https://github.com/siphosenkosindhlovu/gulp-boilerplate.git */

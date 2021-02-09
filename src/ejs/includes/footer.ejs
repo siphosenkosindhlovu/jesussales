@@ -1,0 +1,101 @@
+<script>
+	$(document).ready(function () {
+		$('.products-slider').slick({
+			mobileFirst: true,
+			slidesToShow: 1,
+			arrows: false,
+			dots: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+					}
+				},
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						dots: false
+					}
+				}
+			]
+		})
+
+		$('.brands-slider').slick({
+			mobileFirst: true,
+			slidesToShow: 2,
+			responsive: [{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 6
+				}
+			}]
+		})
+		$('.advantages-slider').slick({
+			mobileFirst: true,
+			slidesToShow: 1,
+			appendDots: $('.dotsContainer')
+		})
+		$('.advantages-images-slider').slick({
+			mobileFirst: true,
+			slidesToShow: 1,
+			appendDots: $('.dotsContainer')
+		})
+
+		$('.advantage-slider').on('afterChange', function (e, slick, currentSlide, nextSlide) {
+			console.log(e.target)
+		})
+
+		$('.about-slider').slick({
+			mobileFirst: true,
+			slidesToShow: 1,
+			dots: true,
+			responsive: [{
+				breakpoint: 768,
+				settings: "unslick"
+			}]
+		})
+
+		var vStyles = {
+			innerColors: ["#BBC537", '#13736B', '#133D67', '#5B4285'],
+			outerColors: ['#CCD63C', '#00AF99', '#18B6E0', '#8574B3']
+		};
+		var vSwitch = $('#VSwitch');
+		var vSwitchInner = $('#VSwitch .v-switch-number');
+		$('.about-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+			vSwitch.css('background-color', vStyles.outerColors[nextSlide])
+			vSwitchInner.css('background-color', vStyles.innerColors[nextSlide])
+			vSwitchInner.html(nextSlide + 1)
+			if(!isEven(nextSlide)){
+				vSwitchInner.css('transform', 'translateY(100px)')
+			}else{
+				vSwitchInner.css('transform', 'translateY(0px)')
+			}
+		});
+
+		$('.testimonial-slider').slick({
+			mobileFirst: true,
+			slidesToShow: 1,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+					}
+				},
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+					}
+				}
+			]
+		})
+
+		function isEven(number) { return number % 2 === 0 }
+	})
+</script>
+</body>
+
+</html>

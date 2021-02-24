@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
@@ -17,16 +18,16 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
-	<div class="bg-light">
-		<nav class="navbar navbar-expand-sm navbar-light container">
-			<a class="navbar-brand" href="#"><img src="images/logo.png" class="img-fluid"></a>
+<body style="padding-top: 75px;">
+	<div class="bg-light shadow-lg position-fixed w-100" style="z-index: 1000; top: 0">
+		<nav class="navbar navbar-expand-lg navbar-light container">
+			<a class="navbar-brand" href="/"><img src="images/logo.png" class="img-fluid"></a>
 			<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
 				aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="collapsibleNavId">
-				<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+				<ul class="navbar-nav ml-auto mt-2 mt-lg-0 align-items-lg-center p-4xl p-lg-0">
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">Planes</a>
@@ -37,25 +38,138 @@
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">¿Qué es Myca?</a>
+						<a class="nav-link" href="about.html">¿Qué es Myca?</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Blog</a>
+						<a class="nav-link" href="blog.html">Blog</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contacto</a>
+						<a class="nav-link" href="contact.html">Contacto</a>
 					</li>
-
+					<li class="nav-item d-flex justify-content-between align-items-end mt-auto">
+						<div class="d-lg-none">
+							<a href="#"><img src="svg/ig.svg" alt=""></a>
+							<a href="#"><img src="svg/fb.svg" alt=""></a>
+						</div>
+						<div>
+							<button class="btn btn-lime rounded-sm" data-toggle="modal" data-target="#model2">Te llamamos</button>
+						</div>
+					</li>
 				</ul>
-				<button class="btn btn-lime my-2 my-sm-0 rounded-sm">Te llamamos</button>
 			</div>
 		</nav>
 	</div>
+	<div class="modal fade" id="model2" tabindex="-1" role="dialog" aria-labelledby="Te llamamos gratis."
+	aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header border-bottom-0">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body p-5">
+				<form action="">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-text">
+									<span class="display-form font-weight-bold mb-3">
+										Te llamamos gratis.
+									</span>
+								</div>
+								<div class="form-text mb-4">
+									<span class="lead">
+										Para poder atenderte mejor necesitamos conocer:
+									</span>
+								</div>
+								<div class="form-group">
+									<div class="border border-dark-blue form-radio-collapsible">
+										<div class="bg-white border-bottom-0" role="tab" id="section1HeaderId1">
+											<a class="text-dark-blue d-flex justofy-content-between" data-toggle="collapse"href="#section1ContentId1"
+												aria-expanded="false" aria-controls="section1ContentId1">
+												Motivo de la llamada
+												<span class="arrow">
+													<i class="bi bi-chevron-down"></i>
+												</span>
+											</a>
+										</div>
+										<div id="section1ContentId1" class="collapse in form-radio-collapse-list" role="tabpanel"
+											aria-labelledby="section1HeaderId1">
+											<div class="form-select-list">
+												<div class="form-check">
+													<label class="form-check-label">
+														<input type="radio" class="form-check-input" name="1" id="" value="checkedValue">
+														Menos de 200€/mes
+													</label>
+												</div>
+												<div class="form-check">
+													<label class="form-check-label">
+														<input type="radio" class="form-check-input" name="1" id="" value="checkedValue">
+														Entre 200 - 500€/mes
+													</label>
+												</div>
+												<div class="form-check">
+													<label class="form-check-label">
+														<input type="radio" class="form-check-input" name="1" id="" value="checkedValue">
+														Más de 500€/mes
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="name" class="sr-only">Nombre*</label>
+									<input type="text" name="" id="name" class="form-control bg-light" placeholder="Nombre*"
+										aria-describedby="helpId">
+								</div>
+								<div class="form-group">
+									<label for="name" class="sr-only">Apellidos*</label>
+									<input type="text" name="" id="name" class="form-control bg-light" placeholder="Apellidos*"
+										aria-describedby="helpId">
+								</div>
+								<div class="form-group">
+									<label for="name" class="sr-only">Email* </label>
+									<input type="email" name="" id="name" class="form-control bg-light" placeholder="Email*"
+										aria-describedby="helpId">
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text bg-light font-weight-bold text-dark-blue border-right"
+											id="basic-addon1">+34</span>
+									</div>
+									<input type="text" class="form-control bg-light" placeholder="Teléfono*" aria-label="Teléfono*"
+										aria-describedby="basic-addon1">
+								</div>
+								<div class="form-check">
+									<label class="form-check-label text-gray-4">
+										<input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+										Acepto recibir datos...
+									</label>
+								</div>
+								<div class="form-text text-gray-4">
+									Al hacer clic en Enviar, aceptas que Grupo GNA almacene y procese la información personal suministrada
+									arriba para proporcionarte el contenido solicitado.
+								</div>
+								<div class="text-right">
+									<button type="button" class="btn btn-lime">Enviar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 
 <section class="container-md py-5">
   <picture>
-    <source srcset="../images/myca-mov-1500x230-1_1.png" media="(min-width: 768px)">
-    <img src="images/contact-movie-mobile.png" class="img-fluid" width="100%">
+    <source srcset="images/myca-mov-1500x230.gif" media="(min-width: 768px)">
+    <img src="images/myca-mov-1500x230.gif" class="img-fluid" width="100%">
   </picture>
 </section>
 <section class="container mb-5 mb-lg-8xl">
@@ -94,7 +208,7 @@
   <div class="card-body text-white p-5">
     <div class="row h-100">
       <div class="d-none d-lg-block col-lg-5">
-        <img src="../images/office.png" class="img-fluid h-100" style="object-fit: cover;" alt="" srcset="">
+        <img src="images/office.png" class="img-fluid h-100" style="object-fit: cover;" alt="" srcset="">
       </div>
       <div class="col-lg-7">
         <form action="">
@@ -133,14 +247,43 @@
     </div>
   </div>
 
-  <img class="card-img-top img-fluid" src="../images/gmaps.png">
+  <img class="card-img-top img-fluid" src="images/gmaps.png">
 </div>
   <div class="text-center">
-    <button type="button" class="btn btn-turqoise">Te llamamos</button>
+    <button type="button" class="btn btn-turqoise" data-toggle="modal" data-target="#model2">Te llamamos</button>
   </div>
 </section>
+<footer class="bg-lime">
+	<div class="container-fluid py-4 py-lg-6">
+		<div class="d-flex justify-content-between align-items-center flex-wrap">
+			<div>
+				<img src="svg/gna.svg" class="img-fluid" alt="" srcset="">
+			</div>
+			<nav class="nav-footer">
+				<a href="http://">Política de privacidad </a>
+				<a href="http://">Política de cookies</a>
+				<a href="http://">Aviso legal</a>
+				<a href="http://">Términos y condiciones</a>
+			</nav>
+			<div>
+				<a href="#"><img src="svg/ig.svg" alt=""></a>
+				<a href="#"><img src="svg/fb.svg" alt=""></a>
+			</div>
+		</div>
+
+	</div>
+	<div class="container-fluid bg-lime-darker py-3 text-right">
+		<img src="svg/humad.svg" alt="">
+	</div>
+</footer>
 <script>
 	$(document).ready(function () {
+		$('.jumbotron-slider').slick({
+			mobileFirst: true,
+			slidesToShow: 1,
+			autoplay: true,
+			arrows: false
+		})
 		$('.products-slider').slick({
 			mobileFirst: true,
 			slidesToShow: 1,
@@ -166,6 +309,8 @@
 		$('.brands-slider').slick({
 			mobileFirst: true,
 			slidesToShow: 2,
+			prevArrow: '<button type="button" class="slick-prev bi bi-chevron-left text-dark-blue">Previous</button>',
+			nextArrow: '<button type="button" class="slick-next bi bi-chevron-right text-dark-blue">Next</button>',
 			responsive: [{
 				breakpoint: 768,
 				settings: {
@@ -176,7 +321,7 @@
 		$('.advantages-slider').slick({
 			mobileFirst: true,
 			slidesToShow: 1,
-			appendDots: $('.dotsContainer')
+			autoplay: true
 		})
 		$('.advantages-images-slider').slick({
 			mobileFirst: true,
@@ -208,9 +353,9 @@
 			vSwitch.css('background-color', vStyles.outerColors[nextSlide])
 			vSwitchInner.css('background-color', vStyles.innerColors[nextSlide])
 			vSwitchInner.html(nextSlide + 1)
-			if(!isEven(nextSlide)){
+			if (!isEven(nextSlide)) {
 				vSwitchInner.css('transform', 'translateY(100px)')
-			}else{
+			} else {
 				vSwitchInner.css('transform', 'translateY(0px)')
 			}
 		});
@@ -218,6 +363,8 @@
 		$('.testimonial-slider').slick({
 			mobileFirst: true,
 			slidesToShow: 1,
+			prevArrow: '<button type="button" class="slick-prev bi bi-chevron-left text-white">Previous</button>',
+			nextArrow: '<button type="button" class="slick-next bi bi-chevron-right text-white">Next</button>',
 			responsive: [
 				{
 					breakpoint: 768,

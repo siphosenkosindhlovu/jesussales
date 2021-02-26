@@ -1,0 +1,48 @@
+.navbar-collapse .navbar-nav {
+  height: calc(100vh - 73px);
+  @include media-breakpoint-up(lg) {
+    height: unset;
+  }
+}
+
+.navbar-nav {
+  .nav-link {
+    font-size: 18px;
+    &:hover,
+    &:active {
+      color: $blue;
+    }
+    & + .dropdown-menu {
+      background-color: $gray-1;
+      border: none;
+      border-radius: 0;
+      @include media-breakpoint-up(lg){
+        padding: 26px;
+      }
+      .dropdown-item {
+        padding-left: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $input-color;
+        color: $dark-blue;
+        @include media-breakpoint-up(lg) {
+          padding: 12px 0;
+          &:first-child {
+            padding-top: 0;
+          }
+          &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+
+        &:hover, &:active {
+          background-color: transparent;
+          font-weight: bold;
+        }
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 1rem;
+    }
+  }
+}

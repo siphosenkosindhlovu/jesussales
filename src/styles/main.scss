@@ -47,21 +47,21 @@ $spacers: (
 );
 
 $grid-gutter-width: 48px;
-
+$form-grid-gutter-width: 30px;
 $input-btn-font-size: 1.15rem;
 
 $input-border-radius: 5px;
 $input-border-width: 0;
 $input-padding-x: 1.25rem;
 
-$input-btn-padding-y-lg: 1rem;
-$input-btn-padding-x-lg: 1.75rem;
+$input-btn-padding-y-lg: 12px;
+$input-btn-padding-x-lg: 28px;
 
 $input-color: #d5d5d5;
 $input-placeholder-color: $input-color;
 $input-plaintext-color: $input-color;
 $btn-padding-y: $input-btn-padding-y-lg;
-$btn-padding-x: $input-btn-padding-y-lg;
+$btn-padding-x: $input-btn-padding-x-lg;
 $btn-font-weight: bold;
 $btn-font-size-sm: 13px;
 $btn-font-size: 1.15rem;
@@ -89,7 +89,9 @@ $navbar-nav-link-padding-x: 2rem;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "components/base";
-
+@import "components/navbar";
+@import "components/billboard";
+@import "components/product";
 html {
   font-size: 13px;
 }
@@ -164,6 +166,9 @@ html {
   @include media-breakpoint-up(lg) {
     font-size: 40px;
     margin-bottom: 40px;
+    &--v2 {
+      font-size: 36px;
+    }
   }
 }
 
@@ -472,7 +477,7 @@ html {
 }
 
 .form-radio-collapse-list {
-  @extend .py-4;
+  padding: map-get($map: $spacers, $key: 4) 0;
   color: $gray-3;
   z-index: $zindex-dropdown;
   border-top: none !important;
@@ -486,7 +491,7 @@ html {
     background-color: white;
     border-color: inherit;
     width: calc(100% + 2px);
-    @extend .p-lg-4;
+    padding: map-get($map: $spacers, $key: 4);
   }
 }
 
@@ -498,7 +503,7 @@ html {
 }
 
 .dotsContainer {
-  position: relative
+  position: relative;
 }
 
 .slick-dots {
@@ -548,7 +553,7 @@ html {
 .nav-footer {
   a {
     display: inline-block;
-    font-size: 8px;
+    font-size: 10px;
     color: white;
     padding: 3px 6px;
     transition: all 0.3s;
@@ -569,41 +574,9 @@ html {
   }
 }
 
-.navbar-collapse .navbar-nav {
-  height: calc(100vh - 73px);
-  @include media-breakpoint-up(lg) {
-    height: unset;
-  }
-}
-
-.navbar-nav {
-  .nav-link {
-    font-size: 18px;
-    &:hover,
-    &:active {
-      color: $blue;
-    }
-    & + .dropdown-menu {
-      background-color: $gray-1;
-      border: none;
-      .dropdown-item {
-        padding-left: 0;
-        padding-bottom: 10px;
-        border-bottom: 1px solid $input-color;
-        @include media-breakpoint-up(lg) {
-          padding-left: 2rem;
-        }
-      }
-    }
-    @include media-breakpoint-up(lg) {
-      font-size: 1rem;
-    }
-  }
-}
-
-
-.slick-prev:before, .slick-next:before {
-  color: inherit
+.slick-prev:before,
+.slick-next:before {
+  color: inherit;
 }
 
 .slick-track {
@@ -632,4 +605,32 @@ html {
       background-color: white;
     }
   }
+}
+
+.brands-slider {
+  max-width: 685px;
+  margin: auto;
+}
+
+.btn-long {
+  padding: {
+    left: 3.5rem;
+    right: 3.5rem
+  }
+}
+
+.required::-webkit-input-placeholder:after {
+  content: " *";
+  display: block;
+  color: red;
+}
+
+.required:-moz-placeholder:after {
+  content: " *";
+  color: red;  
+}
+
+.required:-ms-input-placeholder:after {  
+  content: " *";
+  color: red;  
 }

@@ -7,6 +7,10 @@
 		"name": "Siphosenkosi Ndhlovu",
 		"url": "http://siphosenkosi.com"
 	},
+	"scripts": {
+		"watch": "gulp watch",
+		"build": "gulp build"
+	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",

@@ -46,6 +46,8 @@ $spacers: (
   10: 10rem,
 );
 
+$table-border-color: $dark-blue;
+
 $grid-gutter-width: 48px;
 $form-grid-gutter-width: 30px;
 $input-btn-font-size: 1.15rem;
@@ -191,6 +193,21 @@ html {
   font-size: 1.5rem;
 }
 
+.text-lg {
+  font-size: 25px !important;
+}
+
+.text-md {
+  font-size: 16px;
+}
+.text-2md {
+  font-size: 18px;
+}
+.text-3md {
+  font-size: 20px;
+}
+
+
 .card {
   &-product {
     border: 1px solid $body-color;
@@ -286,6 +303,13 @@ html {
 
 .rounded-lg {
   overflow: hidden;
+}
+
+@include media-breakpoint-up(lg){
+  .rounded-lg-3 {
+    border-radius: 45px;
+  }
+
 }
 
 .font-weight-medium {
@@ -385,7 +409,7 @@ html {
 }
 
 .compare {
-  max-width: 650px;
+  max-width: 467px;
   margin: auto;
   & > div {
     display: grid;
@@ -434,8 +458,12 @@ html {
     border: 4px solid $dark-blue;
     position: relative;
     border-radius: 999px;
-    padding: 1rem 3rem;
-    margin: 18px auto;
+    margin: 18px auto;width: 210px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2.5rem;
     @extend %strokes;
     @include media-breakpoint-up(lg) {
       font-size: 20px;
@@ -619,6 +647,11 @@ html {
   }
 }
 
+.btn-sm {
+  font-size: 13px;
+  padding: 9px 10px;
+}
+
 .required::-webkit-input-placeholder:after {
   content: " *";
   display: block;
@@ -633,4 +666,41 @@ html {
 .required:-ms-input-placeholder:after {  
   content: " *";
   color: red;  
+}
+
+.table {
+  tr{
+    td {
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  &:first-child {
+    td {
+      border-top: none;
+    }
+  }
+}
+}
+
+.pricing {
+  .btn {
+    padding: 4px 7px;
+    @include media-breakpoint-up(lg){
+      padding: 9px 10px
+    }
+  }
+}
+
+.card{
+  overflow: hidden;
+}
+
+.article-image {
+  @include media-breakpoint-up(lg){
+    max-width: 75%;
+  }
 }
